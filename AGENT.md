@@ -46,8 +46,8 @@ disguise.
 
 | Operation | Why it is high-risk here |
 |---|---|
-| Adding a dependency | Sets the stack (OQ-22) and drags in a licence (see below). |
-| Adding a `LICENSE` file | **A user decision (OQ-01), not an agent's.** |
+| Adding a dependency | Sets the stack (OQ-22) **and** drags in an inbound licence that has to be reviewed against Apache-2.0 and recorded. |
+| Changing the project's licence | Apache-2.0, ruled by Geoff 2026-09-27 (OQ-01, resolved). **A user decision, not an agent's** — and so is relicensing. |
 | Committing catalogue data | Software licensing, data licensing and naming/content rights are three different questions. See [`docs/reuse-and-licensing-policy.md`](docs/reuse-and-licensing-policy.md). |
 | Reporting a pattern as a finding | Novel patterns are **candidate relationships requiring validation**, not discoveries because they look interesting. See [`docs/scientific-discipline.md`](docs/scientific-discipline.md). |
 | Hand-writing `AGENTS.md` | Deliberately absent — OQ-35. The fleet's pointer is generated and this repo is ineligible because it is public. |

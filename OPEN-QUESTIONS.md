@@ -17,8 +17,8 @@ Status values: `open`, `user decision`, `deferred by design`.
 
 | ID | Question | Status | Notes |
 |---|---|---|---|
-| **OQ-01** | **Which licence?** | **user decision** | A public repo with **no** licence is *all rights reserved*, which contradicts the broad-reuse goal. The realistic candidates are **MIT** (shortest, most permissive, no explicit patent grant, no `NOTICE` mechanism) and **Apache-2.0** (explicit patent grant, `NOTICE` handling, attribution machinery that suits a project intending to absorb third-party permissively licensed machinery, but more text). Both are commercial-use compatible and both are compatible with absorbing MIT/BSD code. See [`docs/reuse-and-licensing-policy.md`](docs/reuse-and-licensing-policy.md). **Not to be chosen by an agent.** |
 | **OQ-02** | Should CAELITEX be registered as a curated member of the Symniqs ecosystem (`metaOps/ecosystem-registry.yaml`), or recorded in `excluded_from_ecosystem`? | open | Membership is editorial judgement and the registry is governance-gated (PR from every surface). Absence is ambiguous either way, so *some* record is wanted. Also affects whether `metaOps/repos/caelitex/` is scaffolded. |
+| **OQ-03** | Should the copyright line name a specific holder instead of *"the CAELITEX authors"*? | **user decision** | The `LICENSE` text is unmodified and carries the appendix's `[yyyy] [name of copyright owner]` placeholders, as it should. The attribution that *is* asserted — in `README.md` — currently reads `Copyright 2026 the CAELITEX authors`, a deliberately non-presumptive form. Naming a legal holder is a one-line change and is not an agent's call. |
 
 ## Deliberately deferred — architecture and implementation
 
@@ -67,4 +67,35 @@ them would have forced a deferred decision above.
 
 ## Resolved
 
-*None yet. Entries move here with a date, the decision, and the alternatives rejected.*
+### OQ-01 — Which licence? → **Apache-2.0**
+
+**Resolved 2026-09-27. Ruled by Geoff.**
+
+**Decision.** CAELITEX is licensed under the **Apache License, Version 2.0**.
+`SPDX-License-Identifier: Apache-2.0`. The standard licence body is committed unmodified
+as [`LICENSE`](LICENSE).
+
+**Reasoning.** A public repository with no licence is *all rights reserved*, which
+contradicted the broad-reuse-including-commercial goal. Between the two realistic
+candidates, Apache-2.0's **explicit patent grant** and **`NOTICE` mechanism** suit a
+project that intends to absorb permissively licensed third-party machinery — the `NOTICE`
+file gives third-party attributions a defined home.
+
+**Alternative rejected: MIT.** Shorter and marginally easier for downstream users to
+comply with, and equally permissive of commercial use and of absorbing MIT/BSD code, but
+it has **no explicit patent grant** and **no attribution mechanism** beyond a copyright
+notice. Apache-2.0's extra length was accepted as the cost.
+
+**What this did *not* resolve.** Only the **outbound** licence. Inbound compatibility
+review, the per-component reuse record, and the copyleft review still apply to every
+component, every time — see
+[`docs/reuse-and-licensing-policy.md`](docs/reuse-and-licensing-policy.md). Data
+licensing and naming/content rights remain separate questions. **No other entry in this
+register was affected**; nothing about language, architecture, dependencies, CI or the
+data model follows from the licence.
+
+**Consequences deliberately not taken.** No `NOTICE` file (nothing to attribute yet —
+Apache-2.0 §4(d) only binds redistributors if the work *has* one). No per-file licence
+headers (the appendix boilerplate is a suggestion, and there are no source files to put
+it in; applying it would have meant inventing files). Both are recorded as guidance in
+the policy document.

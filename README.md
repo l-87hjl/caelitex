@@ -72,16 +72,33 @@ celestial relationships into alternative representations.
 | [`AGENT.md`](AGENT.md) | Repository identity, boundaries, and what is *not* authorized yet. |
 | [`docs/`](docs/) | Canonical intent: research directions, data philosophy, scientific discipline, prior art, reuse and licensing policy, glossary. |
 | [`develop/`](develop/) | Non-canonical incubation zone. Allowed to be incomplete, speculative, and self-contradictory. |
+| [`LICENSE`](LICENSE) | Apache License 2.0, unmodified. |
 
 There is **no** `src/`, no package manifest, no CI workflow and no
 `docs/ARCHITECTURE.md`. Their absence is a recorded decision, not an oversight —
 see [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md).
 
-## Licence — unresolved, and it matters now
+## Licence
 
-**This repository has no `LICENSE` file, and that is a known problem rather than an
-oversight.** A public repository with no licence defaults to **all rights reserved**,
-which directly contradicts the stated goal of broad reuse including possible commercial
-use. The choice is a user decision; see **OQ-01** in
-[`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md) and
-[`docs/reuse-and-licensing-policy.md`](docs/reuse-and-licensing-policy.md).
+Licensed under the **Apache License, Version 2.0**. See [`LICENSE`](LICENSE) for the full
+text.
+
+```
+SPDX-License-Identifier: Apache-2.0
+Copyright 2026 the CAELITEX authors
+```
+
+Ruled by Geoff on 2026-09-27, closing **OQ-01**. Apache-2.0 was chosen over MIT for its
+explicit patent grant and its `NOTICE` mechanism, which gives third-party attributions a
+defined home in a project that intends to absorb permissively licensed third-party
+machinery.
+
+**This settles the licence *this project grants outward*. It settles nothing about what
+the project may take in.** Every reused or adapted component still needs the
+compatibility review and the per-component record in
+[`docs/reuse-and-licensing-policy.md`](docs/reuse-and-licensing-policy.md) — and
+software licensing, data licensing, and naming/content rights remain three separate
+questions.
+
+There is no `NOTICE` file yet, deliberately: there are no third-party attributions to
+carry. See the policy document for when one becomes required.

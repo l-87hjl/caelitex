@@ -9,7 +9,7 @@ belongs in [`develop/`](../develop/) instead.
 | [`data-and-provenance.md`](data-and-provenance.md) | Fixes that provenance and uncertainty are preserved. **Fixes no schema.** |
 | [`scientific-discipline.md`](scientific-discipline.md) | Fixes that controls, leakage detection, and permitted/withheld records are required of experiments. Fixes no experiment. |
 | [`prior-art.md`](prior-art.md) | Fields and named leads to investigate. **No item here is an approved dependency.** |
-| [`reuse-and-licensing-policy.md`](reuse-and-licensing-policy.md) | Fixes the reuse ordering and the record required per reused component. **Does not choose the project's licence** — that is OQ-01. |
+| [`reuse-and-licensing-policy.md`](reuse-and-licensing-policy.md) | Fixes the reuse ordering, the record required per reused component, and the project's **outbound** licence (Apache-2.0, OQ-01 resolved). **Does not settle inbound compatibility** — that is a per-component review, every time. |
 | [`glossary.md`](glossary.md) | Fixes vocabulary. Records which terms are deliberately left undefined. |
 
 ## What is absent, and why
