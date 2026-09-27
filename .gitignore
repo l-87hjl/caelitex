@@ -1,0 +1,12 @@
+# Language- and toolchain-specific entries are deliberately absent: no language has
+# been chosen yet (OPEN-QUESTIONS.md → OQ-10, OQ-33). Add a section when one is.
+
+# macOS
+.DS_Store
+._*
+
+# Editors
+*.swp
+*.swo
+.idea/
+.vscode/
